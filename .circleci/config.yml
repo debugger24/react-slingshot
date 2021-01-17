@@ -6,22 +6,22 @@ jobs:
       - image: circleci/node:latest
     steps:
       - checkout
-      - run: "npn install"
-      - run: "npn build"
+      - run: "npm install"
+      - run: "npm build"
   test:
     docker:
       - image: circleci/node:latest
     steps:
       - checkout
-      - run: "npn install"
-      - run: "npn test"
+      - run: "npm install"
+      - run: "npm test"
   analyze:
     docker:
         - image: circleci/node:latest
     steps:
       - checkout
-      - run: "npn install"
-      - run: "npn build"
+      - run: "npm install"
+      - run: "npm build"
       - run: "analyze-bundle"
 
 workflows:
